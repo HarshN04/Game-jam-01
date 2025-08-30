@@ -2,32 +2,43 @@ using UnityEngine;
 
 public class Sugarcane : MonoBehaviour
 {
+    [Header("Growth Sprites")]
     public Sprite seedSprite;
     public Sprite smallSprite;
     public Sprite normalSprite;
 
-    private SpriteRenderer spriteRenderer;
-    private int growthStage = 0; // 0 = seed, 1 = small, 2 = normal
-    private float growthTime = 5f; // default 5 seconds per stage
+    [Header("Growth Settings")]
+    public float growthTime = 5f; // time per stage
     private float timer;
+    private int growthStage = 0; // 0 = seed, 1 = small, 2 = normal
+
+    [Header("Health Settings")]
+    public int maxHP = 10;
+    private int currentHP;
+
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = seedSprite;
-        timer = growthTime;
+        ResetCane();
     }
 
     private void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
+        // Only grow if not destroyed and not fully grown
+        if (growthStage < 2)
         {
-            Grow();
-            timer = growthTime;
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                Grow();
+                timer = growthTime;
+            }
         }
     }
 
+    // Handle growth stages
     void Grow()
     {
         if (growthStage == 0)
@@ -51,5 +62,34 @@ public class Sugarcane : MonoBehaviour
     {
         timer /= 2f;
         Debug.Log("Irrigation applied, growth speed boosted!");
+    }
+
+    // Take damage when hit
+    public void TakeDamage(int damage)
+    {
+        currentHP -= damage;
+
+        if (currentHP <= 0)
+        {
+            Harvest();
+        }
+    }
+
+    // When destroyed/harvested
+    void Harvest()
+    {
+        Debug.Log("Sugarcane harvested!");
+
+        // Reset to seed stage
+        ResetCane();
+    }
+
+    // Reset HP + Growth back to seed stage
+    void ResetCane()
+    {
+        currentHP = maxHP;
+        growthStage = 0;
+        spriteRenderer.sprite = seedSprite;
+        timer = growthTime;
     }
 }

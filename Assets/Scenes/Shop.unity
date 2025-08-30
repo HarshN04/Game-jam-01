@@ -1249,7 +1249,7 @@ Transform:
   m_GameObject: {fileID: 236370026}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.28293714, w: 0.95913845}
-  m_LocalPosition: {x: -3.01, y: 2.67, z: 0}
+  m_LocalPosition: {x: -3.96, y: 3.76, z: 0}
   m_LocalScale: {x: 9.241872, y: 14.348989, z: 1.4596}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1934,7 +1934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95.8, y: -64.3}
+  m_AnchoredPosition: {x: 100, y: -64.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384585487
@@ -2287,7 +2287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5, y: -100.49999}
+  m_AnchoredPosition: {x: -5, y: -100.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493045598
@@ -2785,8 +2785,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607188431}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &610116989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,7 +2921,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610116989}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,11 +3625,7 @@ GameObject:
   - component: {fileID: 827231665}
   - component: {fileID: 827231664}
   m_Layer: 5
-<<<<<<< Updated upstream
-  m_Name: bare hands
-=======
-  m_Name: Price
->>>>>>> Stashed changes
+  m_Name: price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4596,11 +4589,7 @@ GameObject:
   - component: {fileID: 1058458406}
   - component: {fileID: 1058458405}
   m_Layer: 5
-<<<<<<< Updated upstream
-  m_Name: Text (TMP)
-=======
-  m_Name: Item name
->>>>>>> Stashed changes
+  m_Name: item name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4622,7 +4611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.6025427}
-  m_AnchoredPosition: {x: 4.44, y: 37.88}
+  m_AnchoredPosition: {x: 4.44, y: 37.879997}
   m_SizeDelta: {x: 117.47, y: 17.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058458405
@@ -4678,11 +4667,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-<<<<<<< Updated upstream
   m_fontStyle: 3
-=======
-  m_fontStyle: 0
->>>>>>> Stashed changes
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4692,13 +4677,13 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -5003,10 +4988,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 39277655}
-<<<<<<< Updated upstream
-=======
   - {fileID: 1477663534}
->>>>>>> Stashed changes
   - {fileID: 314533886}
   - {fileID: 665072656}
   - {fileID: 152607924}
@@ -5058,7 +5040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.1, y: -62.3}
+  m_AnchoredPosition: {x: 116.5, y: -63.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303959740
@@ -5090,13 +5072,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-<<<<<<< Updated upstream
-    rgba: 4283716692
-  m_fontColor: {r: 0.32941177, g: 0.32941177, b: 0.32941177, a: 1}
-=======
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
->>>>>>> Stashed changes
+    rgba: 4281874488
+  m_fontColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5385,7 +5362,7 @@ Transform:
   m_GameObject: {fileID: 1307331257}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.76, y: 3.05, z: 0}
+  m_LocalPosition: {x: 1.08, y: 4.37, z: 0}
   m_LocalScale: {x: 10.703437, y: 12.924311, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5494,11 +5471,7 @@ GameObject:
   - component: {fileID: 1477663536}
   - component: {fileID: 1477663535}
   m_Layer: 5
-<<<<<<< Updated upstream
   m_Name: price.txt
-=======
-  m_Name: bare hands
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5511,34 +5484,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477663533}
-<<<<<<< Updated upstream
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.38138062, y: 0.66908884, z: 0.92929}
-=======
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5609418, y: 1.4194642, z: 0.92929}
->>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 610116990}
   - {fileID: 827231663}
   - {fileID: 1058458404}
-<<<<<<< Updated upstream
-  m_Father: {fileID: 1743758164}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 23.4, y: -40.48}
-=======
-  - {fileID: 610116990}
   m_Father: {fileID: 1269654700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 90.486534, y: -113.32039}
->>>>>>> Stashed changes
-  m_SizeDelta: {x: 114.245, y: 117.06}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -307.3, y: 129.93}
+  m_SizeDelta: {x: 115.66, y: 116.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1477663535
 MonoBehaviour:
@@ -5980,7 +5939,7 @@ Transform:
   m_GameObject: {fileID: 1570649035}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.40031695, w: 0.91637677}
-  m_LocalPosition: {x: 6.96, y: 2.55, z: 0}
+  m_LocalPosition: {x: 10.05, y: 4.15, z: 0}
   m_LocalScale: {x: 9.588798, y: 6.3968716, z: 1.0141}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6070,7 +6029,7 @@ Transform:
   m_GameObject: {fileID: 1610463517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.44, y: 0, z: 0}
+  m_LocalPosition: {x: -41.07, y: 1.3, z: 0}
   m_LocalScale: {x: 21.1916, y: 18.096199, z: 47.205807}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6296,7 +6255,7 @@ Transform:
   m_GameObject: {fileID: 1651201153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.85, y: 2.85, z: 0}
+  m_LocalPosition: {x: 5.47, y: 4, z: 0}
   m_LocalScale: {x: 9.859233, y: 9.736041, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6467,10 +6426,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 291906319}
-<<<<<<< Updated upstream
-  - {fileID: 1477663534}
-=======
->>>>>>> Stashed changes
   m_Father: {fileID: 1202815732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
