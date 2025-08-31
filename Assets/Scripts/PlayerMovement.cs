@@ -1,28 +1,18 @@
 using UnityEngine;
 
-public enum WeaponType
-{
-    Barefist,
-    Rustyknife,
-    Sickle,
-    Scythe,
-    Machete
-}
-
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(PlayerCombat))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float speed = 5f;
 
-    [Header("Combat Settings")]
-    public WeaponType currentWeapon = WeaponType.Barefist; // start with Punch
-
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer sr;
+    private PlayerCombat playerCombat;
 
     private Vector2 movement;
     private Vector2 lastMoveDir;
@@ -33,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        playerCombat = GetComponent<PlayerCombat>();
     }
 
     void Update()
@@ -90,8 +81,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", lastMoveDir.y);
         HandleSpriteFlip(lastMoveDir);
 
-        // Play correct animation based on weapon
-        if (currentWeapon == WeaponType.Barefist)
+        // Use PlayerCombat weapon
+        if (playerCombat != null && playerCombat.currentWeapon == PlayerCombat.WeaponType.Barefist)
             animator.SetTrigger("Punch");
         else
             animator.SetTrigger("Slash");

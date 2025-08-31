@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; // Add this
+using TMPro;
 
 public class GameClock : MonoBehaviour
 {
@@ -9,13 +9,14 @@ public class GameClock : MonoBehaviour
     public float realSecondsPerHour = 60f; 
 
     [Header("UI Reference")]
-    public TMP_Text clockText; // <-- Use TMP_Text instead of Text
+    public TMP_Text clockText; // TMP text for clock + day
 
     private int currentHour;
     private int currentMinute;
+    private int currentDay = 1;   // day counter
     private float timeCounter;
 
-    void Start()
+    private void Start()
     {
         currentHour = startHour;
         currentMinute = 0;
@@ -23,18 +24,18 @@ public class GameClock : MonoBehaviour
         UpdateClockUI();
     }
 
-    void Update()
+    private void Update()
     {
-        // Advance time
         timeCounter += Time.deltaTime;
-        if (timeCounter >= realSecondsPerHour / 60f) 
+
+        if (timeCounter >= realSecondsPerHour / 60f)
         {
             timeCounter = 0f;
             AddMinute();
         }
     }
 
-    void AddMinute()
+    private void AddMinute()
     {
         currentMinute++;
 
@@ -48,12 +49,13 @@ public class GameClock : MonoBehaviour
         {
             currentHour = startHour;
             currentMinute = 0;
+            AdvanceToNextDay();  // increment day automatically if needed
         }
 
         UpdateClockUI();
     }
 
-    void UpdateClockUI()
+    private void UpdateClockUI()
     {
         if (clockText != null)
         {
@@ -61,12 +63,22 @@ public class GameClock : MonoBehaviour
             int displayHour = currentHour > 12 ? currentHour - 12 : currentHour;
             if (displayHour == 0) displayHour = 12;
 
-            clockText.text = string.Format("{0:00}:{1:00} {2}", displayHour, currentMinute, ampm);
+            clockText.text = $"Day {currentDay}/7  {displayHour:00}:{currentMinute:00} {ampm}";
         }
     }
 
     public float GetCurrentHour()
     {
         return currentHour + (currentMinute / 60f);
+    }
+
+    // Call this when the player sleeps
+    public void AdvanceToNextDay()
+    {
+        currentDay++;
+        if (currentDay > 7) currentDay = 7; // cap at 7
+        currentHour = startHour;
+        currentMinute = 0;
+        UpdateClockUI();
     }
 }
