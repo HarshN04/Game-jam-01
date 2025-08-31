@@ -64,7 +64,7 @@ Nous avons travaillé main dans la main, en nous aidant mutuellement sur toutes 
 
 ### Membres de l’équipe
 - Noyensing Om  
-- Kushan Gangaram 
+- Kushan Gangaram
 - Bissessur Sehun 
 - Baboolall Nakul Kumar Singh 
 
