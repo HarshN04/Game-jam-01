@@ -10,11 +10,11 @@ public class Sugarcane : MonoBehaviour
     [Header("Growth Settings")]
     public float growthTime = 5f; // time per stage
     private float timer;
-    private int growthStage = 0; // 0 = seed, 1 = small, 2 = normal
+    public int growthStage = 0; // 0 = seed, 1 = small, 2 = normal
 
     [Header("Health Settings")]
     public int maxHP = 10;
-    private int currentHP;
+    public int currentHP;
 
     private SpriteRenderer spriteRenderer;
 
