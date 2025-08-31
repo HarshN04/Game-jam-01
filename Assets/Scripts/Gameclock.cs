@@ -4,19 +4,21 @@ using TMPro;
 public class GameClock : MonoBehaviour
 {
     [Header("Clock Settings")]
-    public int startHour = 7;              
-    public int endHour = 20;               
-    public float realSecondsPerHour = 60f; 
+    public int startHour = 7;               // 7 AM
+    public int endHour = 20;                // 8 PM
+    public float realSecondsPerHour = 60f;  // 1 in-game hour = 60 real seconds
 
     [Header("UI Reference")]
-    public TMP_Text clockText; // TMP text for clock + day
+    public TMP_Text clockText;  // TMP text for clock and day
+    public int totalDays = 7;
+
+    [HideInInspector] public int currentDay = 1;
 
     private int currentHour;
     private int currentMinute;
-    private int currentDay = 1;   // day counter
     private float timeCounter;
 
-    private void Start()
+    void Start()
     {
         currentHour = startHour;
         currentMinute = 0;
@@ -24,10 +26,9 @@ public class GameClock : MonoBehaviour
         UpdateClockUI();
     }
 
-    private void Update()
+    void Update()
     {
         timeCounter += Time.deltaTime;
-
         if (timeCounter >= realSecondsPerHour / 60f)
         {
             timeCounter = 0f;
@@ -35,7 +36,7 @@ public class GameClock : MonoBehaviour
         }
     }
 
-    private void AddMinute()
+    void AddMinute()
     {
         currentMinute++;
 
@@ -45,26 +46,25 @@ public class GameClock : MonoBehaviour
             currentHour++;
         }
 
+        // Auto reset at end hour
         if (currentHour > endHour)
         {
-            currentHour = startHour;
-            currentMinute = 0;
-            AdvanceToNextDay();  // increment day automatically if needed
+            AdvanceDay();
         }
 
         UpdateClockUI();
     }
 
-    private void UpdateClockUI()
+    public void AdvanceDay()
     {
-        if (clockText != null)
-        {
-            string ampm = currentHour >= 12 ? "PM" : "AM";
-            int displayHour = currentHour > 12 ? currentHour - 12 : currentHour;
-            if (displayHour == 0) displayHour = 12;
+        currentDay++;
+        if (currentDay > totalDays)
+            currentDay = totalDays; // Or handle game end here
 
-            clockText.text = $"Day {currentDay}/7  {displayHour:00}:{currentMinute:00} {ampm}";
-        }
+        currentHour = startHour;
+        currentMinute = 0;
+
+        UpdateClockUI();
     }
 
     public float GetCurrentHour()
@@ -72,13 +72,15 @@ public class GameClock : MonoBehaviour
         return currentHour + (currentMinute / 60f);
     }
 
-    // Call this when the player sleeps
-    public void AdvanceToNextDay()
+    void UpdateClockUI()
     {
-        currentDay++;
-        if (currentDay > 7) currentDay = 7; // cap at 7
-        currentHour = startHour;
-        currentMinute = 0;
-        UpdateClockUI();
+        if (clockText != null)
+        {
+            string ampm = currentHour >= 12 ? "PM" : "AM";
+            int displayHour = currentHour > 12 ? currentHour - 12 : currentHour;
+            if (displayHour == 0) displayHour = 12;
+
+            clockText.text = $"Day {currentDay}/{totalDays} - {displayHour:00}:{currentMinute:00} {ampm}";
+        }
     }
 }
