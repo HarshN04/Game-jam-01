@@ -74,4 +74,5 @@ Nous avons travaillé main dans la main, en nous aidant mutuellement sur toutes 
 - Inspiré par l’histoire et la culture mauricienne  
 - Développé avec **Unity** et **C#**  
 - Merci à **OpenAI** pour son aide lors du développement
+
 Un grand merci à toute l’équipe pour leur créativité, leur entraide et leur passion ✨
