@@ -17,6 +17,11 @@ Le thème **“Les Chapitres Inédits de l’île Maurice”** invite à réinve
 
 ---
 
+## 🎯 Objectif du jeu
+Le but de **Paradise Island** est de récolter et vendre de la canne à sucre afin de gagner suffisamment de pièces pour acheter **toutes les améliorations disponibles**... le tout en seulement **7 jours ouvrables** ! 
+
+---
+
 ## ✨ Fonctionnalités
 - 🌞 **Cycle jour/nuit** dynamique – un temps immersif qui évolue naturellement  
 - 🌾 **Récolte de canne à sucre** – coupez et collectez les cannes  
@@ -38,11 +43,14 @@ Le thème **“Les Chapitres Inédits de l’île Maurice”** invite à réinve
 
 4. Cliquez sur ▶ Play dans Unity
 
+---
+
 🎮 Contrôles
 - WASD / Flèches directionnelles → Se déplacer
 - Clic gauche → Couper la canne à sucre / Interagir 
 - Échap / M → Ouvrir le menu
   
+---
 
 🤝 Contribution
 
@@ -51,6 +59,8 @@ Les contributions sont les bienvenues !
 - Forkez le dépôt
 - Créez une branche dédiée
 - Soumettez une Pull Request
+
+---
 
 ## 👥 Équipe / Contributeurs
 Ce projet a été réalisé en collaboration lors du **Game Jam – Les Chapitres Inédits de l’île Maurice**.  
@@ -62,12 +72,15 @@ Nous avons travaillé main dans la main, en nous aidant mutuellement sur toutes 
 - UI / menus
 - Système de cycle jour/nuit
 
-### Membres de l’équipe
+---
+
+### 🧑‍💻Membres de l’équipe
 - Noyensing Om  
 - Kushan Gangaram
 - Bissessur Sehun 
 - Baboolall Nakul Kumar Singh
 
+---
 
 ## 🙏 Remerciements
 - Créé pour le **Game Jam – Les Chapitres Inédits de l’île Maurice**  
