@@ -66,6 +66,12 @@ Nous avons travaillé main dans la main, en nous aidant mutuellement sur toutes 
 - Noyensing Om  
 - Kushan Gangaram
 - Bissessur Sehun 
-- Baboolall Nakul Kumar Singh 
+- Baboolall Nakul Kumar Singh
 
+
+## 🙏 Remerciements
+- Créé pour le **Game Jam – Les Chapitres Inédits de l’île Maurice**  
+- Inspiré par l’histoire et la culture mauricienne  
+- Développé avec **Unity** et **C#**  
+- Merci à **OpenAI** pour son aide lors du développement
 Un grand merci à toute l’équipe pour leur créativité, leur entraide et leur passion ✨
